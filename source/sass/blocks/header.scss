@@ -5,11 +5,10 @@
 }
 
 .header__container {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   padding: 0;
-  position: fixed;
+  position: absolute;
   min-height: 79px;
   left: 0;
   background: #fff;

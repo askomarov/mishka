@@ -40,9 +40,8 @@ const onResizeWindowCloseMenu = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-
+  closeMenu();
   onDesktopShowMenu();
   onResizeWindowCloseMenu();
   onClickMenuButtonToogleMenu();
-
 })
