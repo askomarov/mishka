@@ -1,7 +1,6 @@
 .header {
   position: relative;
   z-index: 1;
-  min-height: 79px;
 }
 
 .header__container {
@@ -9,12 +8,10 @@
   grid-template-columns: 1fr;
   padding: 0;
   position: absolute;
-  min-height: 79px;
+  overflow-x: hidden;
   left: 0;
   background: #fff;
   min-width: 100%;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
   transition: height 0.3s ease 0s;
 }
 
@@ -86,6 +83,7 @@
 
 .header__link {
   color: $black;
+  fill: rgba($color: $black, $alpha: 0.2);
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
@@ -93,27 +91,34 @@
   display: inline-block;
   width: 100%;
   position: relative;
-  border-top: 1px solid #ececec;
   opacity: 1;
   visibility: visible;
   height: auto;
   z-index: 1;
+  border-top: 1px solid #ececec;
+
+  &:last-child {
+    border-bottom: 1px solid #ececec;
+  }
 
   @media (min-width: $width-tablet+px) {
     &:hover,
     &:focus,
     &:focus-within {
       color: rgba($color: $black, $alpha: 0.6);
+      fill: $svg-hover;
     }
   }
 
   &:focus,
   &:focus-within {
     color: rgba($color: $black, $alpha: 0.6);
+    fill: $svg-hover;
   }
 
   &:active {
     color: rgba($color: $black, $alpha: 0.3);
+    fill: rgba($color: $svg-hover, $alpha: 0.3);
   }
 }
 
@@ -148,6 +153,10 @@
 }
 
 .header--menu-open {
+  .header__container {
+    // border-top: 1px solid #ececec;
+    // border-bottom: 1px solid #ececec;
+  }
   .header__link {
     animation: move-in 0.3s ease-in backwards;
     &:nth-child(2) {
