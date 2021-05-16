@@ -1,6 +1,17 @@
 .header {
   position: relative;
   z-index: 1;
+  @media (min-width: $width-tablet+px) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      background: #fbfbfb;
+      width: 100%;
+      height: 65px;
+      border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+    }
+  }
 }
 
 .header__container {
@@ -13,6 +24,22 @@
   background: #fff;
   min-width: 100%;
   transition: height 0.3s ease 0s;
+  @media (min-width: $width-tablet+px) {
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    grid-template-columns: 167px 167px 82px 259px;
+    grid-template-rows: 89px 65px;
+    grid-template-areas:
+      ". . search cart"
+      "catalog order . delivery";
+  }
+  @media (min-width: $width-desktop+px) {
+    grid-template-columns: 184px 220px 1fr 82px 259px;
+    grid-template-areas:
+      "catalog order . search cart"
+      "new sale . . delivery";
+  }
 }
 
 .header__logo {
@@ -57,11 +84,18 @@
     &:focus-within {
       fill: rgba($color: $black, $alpha: 0.6);
     }
+    position: absolute;
+    margin: 0;
+    top: 22px;
+    left: 48px;
   }
 
   @media (min-width: $width-desktop+px) {
+    top: 9px;
     width: 149px;
     height: 72px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &:focus,
@@ -102,6 +136,14 @@
   }
 
   @media (min-width: $width-tablet+px) {
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    &:last-child {
+      border: 0;
+    }
     &:hover,
     &:focus,
     &:focus-within {
@@ -120,6 +162,9 @@
     color: rgba($color: $black, $alpha: 0.3);
     fill: rgba($color: $svg-hover, $alpha: 0.3);
   }
+  @media (min-width: $width-desktop+px) {
+    font-size: 17px;
+  }
 }
 
 .header__icon {
@@ -127,11 +172,78 @@
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
+  @media (min-width: $width-tablet+px) {
+    position: relative;
+    top: initial;
+    left: initial;
+    transform: initial;
+  }
+}
+.header__link--catalog {
+  @media (min-width: $width-tablet+px) {
+    grid-area: catalog;
+  }
+}
+.header__link--order {
+  @media (min-width: $width-tablet+px) {
+    grid-area: order;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-left: 34px;
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+  }
 }
 .header__link--search {
+  @media (min-width: $width-tablet+px) {
+    grid-area: search;
+    justify-content: center;
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+    .header__link-text {
+      display: none;
+    }
+  }
 }
 
 .header__link--cart {
+  @media (min-width: $width-tablet+px) {
+    grid-area: cart;
+    justify-content: flex-end;
+    margin-left: auto;
+    font-size: 17px;
+    .header__icon--cart {
+      margin-right: 32px;
+    }
+  }
+}
+.header__link--new {
+  display: none;
+  @media (min-width: $width-desktop+px) {
+    display: flex;
+    grid-area: new;
+    font-size: 15px;
+  }
+}
+.header__link--sale {
+  display: none;
+  @media (min-width: $width-desktop+px) {
+    display: flex;
+    grid-area: sale;
+    font-size: 15px;
+    padding-left: 35px;
+  }
+}
+
+.header__link--delivery {
+  display: none;
+  @media (min-width: $width-tablet+px) {
+    grid-area: delivery;
+    display: flex;
+    font-size: 15px;
+    color: #444444;
+    font-weight: normal;
+    justify-content: flex-end;
+  }
 }
 
 .header--menu-close {

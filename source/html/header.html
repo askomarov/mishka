@@ -16,14 +16,16 @@
     </svg>
   </a>
   <nav class="header__container container">
-    <a href="#" class="header__link">Каталог товаров</a>
-    <a href="#" class="header__link">Вязание на заказ</a>
+    <a href="#" class="header__link header__link--catalog">Каталог товаров</a>
+    <a href="#" class="header__link header__link--order">Вязание на заказ</a>
 
     <a href="#" class="header__link header__link--search">
       <svg class="header__icon header__icon--search" width="21" height="17.6">
         <use xlink:href="#search"></use>
       </svg>
-      Поиск по сайту
+      <span class="header__link-text">
+        Поиск по сайту
+      </span>
     </a>
     <!-- <label class="header-search__form-label" for="search">
         <input class="header-search__form-input" type="search" name="search" id="search"
@@ -34,9 +36,15 @@
       <svg class="header__icon header__icon--cart" width="21" height="18">
         <use xlink:href="#cart"></use>
       </svg>
-      Корзина: пока пуста
+      <span class="header__link-text">
+        Корзина: пока пуста
+      </span>
     </a>
 
+    <a href="#" class="header__link header__link--new">Новые поступления</a>
+    <a href="#" class="header__link header__link--sale">Распродажа</a>
+
+    <a href="#" class="header__link header__link--delivery">Бесплатная доставка по России</a>
 
   </nav>
 </header>

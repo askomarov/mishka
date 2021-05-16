@@ -41,7 +41,8 @@ const onResizeWindowCloseMenu = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   closeMenu();
-  onDesktopShowMenu();
-  onResizeWindowCloseMenu();
+  // onDesktopShowMenu();
+  window.innerWidth >= 768 ? showMenu() : closeMenu();
+  // onResizeWindowCloseMenu();
   onClickMenuButtonToogleMenu();
 })

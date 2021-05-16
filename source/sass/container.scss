@@ -12,11 +12,11 @@ $width-desktop: 920;
   padding: 0 30px;
 
   @media (min-width: $width-tablet+px) {
+    max-width: 100%;
     padding: 0 50px;
   }
 
   @media (min-width: $width-desktop+px) {
     max-width: $max-width + px;
-    padding: 0;
   }
 }
