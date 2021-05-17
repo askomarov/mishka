@@ -1,4 +1,5 @@
 console.log('hello');
+const body = document.querySelector('.page');
 const header = document.querySelector('.header');
 const menuButton = header.querySelector('.menu-button');
 
@@ -40,6 +41,7 @@ const onResizeWindowCloseMenu = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  body.classList.remove('no-js');
   closeMenu();
   // onDesktopShowMenu();
   window.innerWidth >= 768 ? showMenu() : closeMenu();
