@@ -20,6 +20,7 @@
       background: url("../img/zigzag-fill-desktop.svg");
     }
   }
+
   @media (min-width: $width-desktop+px) {
     background-size: 1150px 746px;
     background-position: center -63px;
@@ -29,12 +30,12 @@
 .promo__container {
   padding: 0;
   padding-top: 73px;
-  max-width: 100%;
+  // max-width: 100%;
   @media (min-width: $width-tablet+px) {
     padding: 90px 50px 0px;
   }
   @media (min-width: $width-desktop+px) {
-    padding-top: 94px;
+    padding: 94px 0 0;
   }
 }
 .promo__title {
@@ -81,9 +82,16 @@
 
 .promo-list__item--interior {
   background: #63d1bb url("../img/interior.svg") no-repeat;
-  background-position: calc(100% - 36px) 30px;
+  background-position: calc(100% - 36px) 23px;
+  @media (min-width:$width-tablet+px){
+    background-position: calc(100% - 36px) 30px;
+  }
+
 }
 .promo-list__item--toys {
   background: #56c3b2 url("../img/toy.svg") no-repeat;
-  background-position: calc(100% - 33px) 31px;
+  background-position: calc(100% - 27px) 21px;
+  @media (min-width:$width-tablet+px){
+    background-position: calc(100% - 33px) 31px;
+  }
 }

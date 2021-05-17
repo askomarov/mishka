@@ -5,3 +5,11 @@
   height: 100%;
   font-family: $font-family;
 }
+.page.no-js {
+  .header__container {
+    position: relative;
+  }
+  .header__menu-button {
+    display: none;
+  }
+}
