@@ -17,6 +17,15 @@
       background: url("../img/zigzag-line-desktop-wide.svg");
     }
   }
+  @media (min-width: $width-desktop+px) {
+    &::after {
+      height: 23px;
+      background-repeat: no-repeat;
+      background-size: 1050px 23px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+  }
 }
 .featured__container {
   padding-top: 31px;

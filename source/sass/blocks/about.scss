@@ -1,0 +1,47 @@
+.about {
+}
+.about__container {
+}
+
+.about__title {
+}
+
+.about__features {
+}
+.about-features {
+}
+.about-features__item {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: $black;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+.about-features__item--1 {
+  background: url("../img/icon-1.svg") 32px 37px no-repeat;
+  background-position: top left;
+}
+.about-features__item--2 {
+  background: url("../img/icon-2.svg") 47px 27px no-repeat;
+  background-position: top left;
+}
+.about-features__item--3 {
+  background: url("../img/icon-3.svg") 34px 27px no-repeat;
+  background-position: top left;
+}
+.about-features__item--4 {
+  background: url("../img/icon-4.svg") 35px 34px no-repeat;
+  background-position: top left;
+}
+.about-features__item--5 {
+  background: url("../img/icon-5.svg") 55px 23px no-repeat;
+  background-position: top left;
+}
+.about-features__item--6 {
+  background: url("../img/icon-6.svg") 33px 32px no-repeat;
+  background-position: top left;
+}
