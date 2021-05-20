@@ -6,15 +6,17 @@
 @import "container.scss";
 @import "main.scss";
 @import "animation.scss";
+@import "mixins.scss";
 
 @import "blocks/header.scss";
 @import "blocks/header-search.scss";
 @import "blocks/header-cart.scss";
 @import "blocks/menu-button.scss";
+
 @import "blocks/promo.scss";
 @import "blocks/featured.scss";
 @import "blocks/about.scss";
 @import "blocks/feedback.scss";
-// @import "blocks/.scss";
+@import "blocks/contact.scss";
 
 @import "blocks/footer.scss";

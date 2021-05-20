@@ -1,24 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>page title</title>
-	<meta name="description" content="Page description">
-
-	<!-- 32x32 -->
-	<!-- <link rel="icon" href="/favicon.ico">  -->
-	<!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
-	<!-- 180x180 -->
-	<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
-
-	<!-- The image displayed when you share the link to a page -->
-	<!-- <meta property="og:image" content="image.jpg"> -->
-
-	<link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include('html/head.html', {
+"title": "page title by include",
+"description": "page description by include"
+})
 
 <body class="page no-js">
 	@@include('html/svg-sprite.html')
@@ -30,6 +16,7 @@
 		@@include('html/featured.html')
 		@@include('html/about.html')
 		@@include('html/feedback.html')
+		@@include('html/contact.html')
 
 	</main>
 

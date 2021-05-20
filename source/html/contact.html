@@ -1,0 +1,34 @@
+<section class="contact">
+  <div class="contact__container container">
+
+    <h2 class="contact__title main-title-h2">Контакты</h2>
+
+    <div class="contact__info contact-info">
+      <div class="contact-info__row">
+        <p class="contact-info__item">e-mail:</p>
+        <a class="contact-info__item-value contact-info__item-value--mail"
+          href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+      </div>
+      <div class="contact-info__row">
+        <p class="contact-info__item">адрес:</p>
+        <p class="contact-info__item-value contact-info__item-value--address">г. Санкт-Петербург,ул. Большая Конюшенная,
+          д. 19/8, офис 101</p>
+      </div>
+    </div>
+
+    <div class="contact__map-wrap">
+      <picture>
+        <!-- <source type="image/wepb" srcset="p 1x, p 2x" media="(min-width:1200px)"> -->
+        <source srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" media="(min-width:1150px)">
+
+        <!-- <source type="image/wepb" srcset=" 1x,  2x" media="(min-width:768px)"> -->
+        <source srcset="img/map-tablet@1x.jpg, map-tablet@2x.jpg" media="(min-width:768px)">
+
+        <!-- <source type="image/wepb" srcset=" 1x,  2x"> -->
+        <img class="contact__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
+          alt="карта, расположение магазина на карте" width="320" height="457">
+      </picture>
+    </div>
+
+    <a type="button" class="contact__btn main-btn">Напишите нам</a>
+</section>

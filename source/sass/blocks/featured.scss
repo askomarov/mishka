@@ -1,32 +1,8 @@
 .featured {
   position: relative;
-  background: #ffffff;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    width: 100%;
-    background: url("../img/zigzag-line-desktop.svg");
-  }
-  @media (min-width: $width-tablet+px) {
-    &::after {
-      height: 17px;
-      background: url("../img/zigzag-line-desktop-wide.svg");
-    }
-  }
-  @media (min-width: $width-desktop+px) {
-    &::after {
-      height: 23px;
-      background-repeat: no-repeat;
-      background-size: 1050px 23px;
-      max-width: 1050px;
-      margin: 0 auto;
-    }
-  }
+  @include zigzagdecor;
 }
+
 .featured__container {
   padding-top: 31px;
   padding-bottom: 42px;

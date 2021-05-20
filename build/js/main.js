@@ -40,13 +40,10 @@ const onResizeWindowCloseMenu = () => {
   )
 };
 
-
-
 let buttons = document.querySelectorAll(".slider-buttons__btn");
 const btnPrev = document.querySelector('.slider-buttons__btn--prev');
 const btnNext = document.querySelector('.slider-buttons__btn--next');
 let slides = document.querySelectorAll(".slider-list__item");
-console.log(slides);
 
 const checkBtnPrev = (slideActive) => {
   if (slideActive.previousElementSibling !== null) {
@@ -55,6 +52,7 @@ const checkBtnPrev = (slideActive) => {
     btnPrev.setAttribute("disabled", "disabled")
   }
 };
+
 const checkBtnNext = (slideActive) => {
   if (slideActive.nextElementSibling !== null) {
     btnNext.removeAttribute("disabled");
@@ -67,20 +65,18 @@ const changeActiveSlider = () => {
   slideActive = document.querySelector(".slider-list__item--active");
   checkBtnPrev(slideActive);
   checkBtnNext(slideActive);
-}
+};
 
-let promoSlider = function () {
+const promoSlider = function () {
   let slideActive = document.querySelector(".slider-list__item--active");
   checkBtnPrev(slideActive);
   checkBtnNext(slideActive);
-  let buttons = document.querySelectorAll(".slider-buttons__btn");
-  // let slides = document.querySelectorAll(".slider-list__item");
 
+  const buttons = document.querySelectorAll(".slider-buttons__btn");
 
   buttons.forEach(btn => (
     btn.addEventListener('click', (evt) => {
       let slideActive = document.querySelector(".slider-list__item--active");
-
 
       if (evt.target.classList.contains('slider-buttons__btn--prev')) {
         if (slideActive.previousElementSibling !== null) {
@@ -90,8 +86,7 @@ let promoSlider = function () {
         }
       }
       if (evt.target.classList.contains('slider-buttons__btn--next')) {
-        // checkBtnPrev(slideActive);
-        // checkBtnNext(slideActive);
+
         if (slideActive.nextElementSibling !== null) {
           slideActive.nextElementSibling.classList.add('slider-list__item--active');
           slideActive.classList.remove('slider-list__item--active');
