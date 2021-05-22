@@ -103,6 +103,7 @@ const copy = () => {
 	return gulp.src([
 		"source/fonts/**/*.{woff,woff2}",
 		"source/img/**",
+		"source/og-site-img.png",
 	], {
 		base: "source"
 	})

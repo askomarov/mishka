@@ -1,4 +1,5 @@
 console.log('hello');
+
 const body = document.querySelector('.page');
 const header = document.querySelector('.header');
 const menuButton = header.querySelector('.menu-button');
@@ -40,6 +41,7 @@ const onResizeWindowCloseMenu = () => {
   )
 };
 
+//  feedback ----------------------------------
 let buttons = document.querySelectorAll(".slider-buttons__btn");
 const btnPrev = document.querySelector('.slider-buttons__btn--prev');
 const btnNext = document.querySelector('.slider-buttons__btn--next');
@@ -67,7 +69,7 @@ const changeActiveSlider = () => {
   checkBtnNext(slideActive);
 };
 
-const promoSlider = function () {
+const promoSlider = () => {
   let slideActive = document.querySelector(".slider-list__item--active");
   checkBtnPrev(slideActive);
   checkBtnNext(slideActive);
@@ -96,6 +98,45 @@ const promoSlider = function () {
     })
   ))
 };
+// end feedback ----------------------------------
+
+//       modal------------------------------------
+const btnOpenModalAddCart = document.querySelector('.feaured__btn');
+const addCartModal = document.querySelector('.add-cart--modal');
+
+const getScrollWidth = () => {
+  let div = document.createElement('div');
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
+  document.body.append(div);
+  let scrollWidth = div.offsetWidth - div.clientWidth;
+  console.log(`scrollWidth -  ${scrollWidth}`);
+  div.remove();
+  return scrollWidth;
+};
+
+const lockBody = (lockPad) => {
+  body.classList.add('lock');
+  body.style.paddingRight = `${lockPad}` + 'px';
+};
+const unlockBody = () => {
+  body.classList.remove('lock');
+  body.style.paddingRight = '';
+};
+
+const onBtnOpenShowMOdal = (lockPad) => {
+  btnOpenModalAddCart.addEventListener('click', () => {
+    addCartModal.setAttribute('aria-hidden', 'true');
+    lockBody(lockPad)
+  });
+};
+
+const closeModal = () => {
+  addCartModal.setAttribute('aria-hidden', 'false');
+  unlockBody();
+};
+//  end modal -----------------------------------------
 
 
 // //////////////////////////////////
@@ -107,4 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // onResizeWindowCloseMenu();
   onClickMenuButtonToogleMenu();
   promoSlider();
+
+  const bodyLockPadding = getScrollWidth();
+  onBtnOpenShowMOdal(bodyLockPadding);
+
 })
