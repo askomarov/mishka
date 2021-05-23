@@ -27,10 +27,12 @@
     left: 0;
     transition: transform 0.3s ease 0s;
   }
+
   &::after {
     transform-origin: left bottom;
     bottom: 6px;
   }
+
   &::before {
     transform-origin: left top;
     top: 6px;
@@ -40,9 +42,11 @@
 .menu-button[aria-expanded="true"] {
   .menu-button__icon {
     height: 0;
+
     &::after {
       transform: translateX(2px) rotate(45deg);
     }
+
     &::before {
       transform: translateX(2px) rotate(-45deg);
     }

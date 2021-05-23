@@ -1,8 +1,7 @@
-.about {
-}
 .about__container {
   padding-top: 31px;
   padding-bottom: 29px;
+
   @media (min-width: $width-tablet+px) {
     padding-top: 56px;
     padding-bottom: 42px;
@@ -13,16 +12,16 @@
 
 .about__title {
   margin-bottom: 28px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 41px;
   }
 }
 
-.about__features {
-}
 .about-features {
   display: grid;
   gap: 30px;
+
   @media (min-width: $width-tablet+px) {
     grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: column;
@@ -30,6 +29,7 @@
     row-gap: 55px;
   }
 }
+
 .about-features__item {
   font-weight: bold;
   font-size: 17px;
@@ -37,29 +37,35 @@
   color: $black;
   padding-top: 54px;
   background-position: left top;
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 22px;
     max-width: 300px;
   }
 }
+
 .about-features__item--1 {
   background: url("../img/icon-1.svg") no-repeat;
   background-size: 32px 37px;
   background-position: 5px top;
 }
+
 .about-features__item--2 {
   background: url("../img/icon-3.svg") no-repeat;
   background-size: 47px 27px;
 }
+
 .about-features__item--3 {
   background: url("../img/icon-5.svg") no-repeat;
   background-size: 34px 27px;
 }
+
 .about-features__item--4 {
   background: url("../img/icon-2.svg") no-repeat;
   background-size: 35px 34px;
 }
+
 .about-features__item--5 {
   background: url("../img/icon-4.svg") no-repeat;
   background-size: 55px 23px;

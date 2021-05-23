@@ -111,7 +111,6 @@ const getScrollWidth = () => {
   div.style.height = '50px';
   document.body.append(div);
   let scrollWidth = div.offsetWidth - div.clientWidth;
-  console.log(`scrollWidth -  ${scrollWidth}`);
   div.remove();
   return scrollWidth;
 };
@@ -128,13 +127,27 @@ const unlockBody = () => {
 const onBtnOpenShowMOdal = (lockPad) => {
   btnOpenModalAddCart.addEventListener('click', () => {
     addCartModal.setAttribute('aria-hidden', 'true');
-    lockBody(lockPad)
+    lockBody(lockPad);
+    onBtnCloseCloseModal();
   });
 };
 
 const closeModal = () => {
   addCartModal.setAttribute('aria-hidden', 'false');
   unlockBody();
+};
+
+const addForm = document.querySelector('.form-add-cart');
+const btnClose = addForm.querySelector('.form-add-cart__close');
+
+const onBtnCloseCloseModal = () => {
+  if (addForm) {
+    btnClose.addEventListener('click', (evt) => {
+      evt.preventDefault()
+      addForm.reset();
+      closeModal();
+    })
+  }
 };
 //  end modal -----------------------------------------
 

@@ -22,9 +22,10 @@
   position: absolute;
   overflow-x: hidden;
   left: 0;
-  background: #fff;
+  background: #ffffff;
   min-width: 100%;
   transition: height 0.3s ease 0s;
+
   @media (min-width: $width-tablet+px) {
     padding-left: 50px;
     padding-right: 50px;
@@ -35,6 +36,7 @@
       ". . search cart"
       "catalog order . delivery";
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-columns: 184px 220px 1fr 82px 259px;
     grid-template-areas:
@@ -50,14 +52,16 @@
   margin: 17px auto 22px;
   position: relative;
   z-index: 5;
-  background: #fff;
+  background: #ffffff;
   fill: $black;
 
   .header__logo-icon-tablet {
     display: none;
+
     @media (min-width: $width-tablet+px) {
       display: block;
     }
+
     @media (min-width: $width-desktop+px) {
       display: none;
     }
@@ -71,6 +75,7 @@
 
   .header__logo-icon-desktop {
     display: none;
+
     @media (min-width: $width-desktop+px) {
       display: block;
     }
@@ -79,16 +84,16 @@
   @media (min-width: $width-tablet+px) {
     width: 114px;
     height: 46px;
+    position: absolute;
+    margin: 0;
+    top: 22px;
+    left: 48px;
 
     &:hover,
     &:focus,
     &:focus-within {
       fill: rgba($color: $black, $alpha: 0.6);
     }
-    position: absolute;
-    margin: 0;
-    top: 22px;
-    left: 48px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -142,9 +147,11 @@
     display: flex;
     align-items: center;
     font-size: 15px;
+
     &:last-child {
       border: 0;
     }
+
     &:hover,
     &:focus,
     &:focus-within {
@@ -163,6 +170,7 @@
     color: rgba($color: $black, $alpha: 0.3);
     fill: rgba($color: $svg-hover, $alpha: 0.3);
   }
+
   @media (min-width: $width-desktop+px) {
     font-size: 17px;
   }
@@ -173,6 +181,7 @@
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
+
   @media (min-width: $width-tablet+px) {
     position: relative;
     top: initial;
@@ -191,6 +200,7 @@
   @media (min-width: $width-tablet+px) {
     grid-area: order;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-left: 34px;
     border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
@@ -203,6 +213,7 @@
     justify-content: center;
     border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
     border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+
     .header__link-text {
       display: none;
     }
@@ -215,6 +226,7 @@
     justify-content: flex-end;
     margin-left: auto;
     font-size: 17px;
+
     .header__icon--cart {
       margin-right: 32px;
     }
@@ -223,6 +235,7 @@
 
 .header__link--new {
   display: none;
+
   @media (min-width: $width-desktop+px) {
     display: flex;
     grid-area: new;
@@ -232,6 +245,7 @@
 
 .header__link--sale {
   display: none;
+
   @media (min-width: $width-desktop+px) {
     display: flex;
     grid-area: sale;
@@ -242,11 +256,12 @@
 
 .header__link--delivery {
   display: none;
+
   @media (min-width: $width-tablet+px) {
     grid-area: delivery;
     display: flex;
     font-size: 15px;
-    color: #444444;
+    color: $text-color;
     font-weight: normal;
     justify-content: flex-end;
   }
@@ -259,15 +274,19 @@
 
   .header__link {
     animation: move-out 0.3s ease-in forwards;
+
     &:nth-child(5) {
       animation-delay: 0;
     }
+
     &:nth-child(4) {
       animation-delay: 0.1s;
     }
+
     &:nth-child(3) {
       animation-delay: 0.2s;
     }
+
     &:nth-child(2) {
       animation-delay: 0.3s;
     }
@@ -278,17 +297,22 @@
   .header__container {
     height: auto;
   }
+
   .header__link {
     animation: move-in 0.3s ease-in backwards;
+
     &:nth-child(2) {
       animation-delay: 0;
     }
+
     &:nth-child(3) {
       animation-delay: 0.1s;
     }
+
     &:nth-child(4) {
       animation-delay: 0.2s;
     }
+
     &:nth-child(5) {
       animation-delay: 0.3s;
     }

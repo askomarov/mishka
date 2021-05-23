@@ -3,7 +3,7 @@
 
     <div class="featured__header">
       <h2 class="featured__title main-title-h2">Вязаные корзинки</h2>
-      <p class="featured__feature">товар<br>&nbsp;недели</p>
+      <p class="featured__feature">товар <br>&nbsp;недели</p>
     </div>
 
     <div class="featured__info featured-info">
@@ -21,7 +21,16 @@
     </div>
 
     <div class="featured__img-wrap">
-      <img src="img/featured-mobile-img.jpg" width="260" height="315" alt="вязанные корзинки" class="featured__img">
+      <picture>
+        <!-- <source type="image/wepb" srcset="p 1x, p 2x" media="(min-width:1200px)"> -->
+        <source srcset="img/featured-desktop-img@1x.jpg" media="(min-width:1150px)">
+
+        <!-- <source type="image/wepb" srcset=" 1x,  2x" media="(min-width:768px)"> -->
+        <source srcset="img/featured-tablet-img@1x.jpg" media="(min-width:768px)">
+
+        <!-- <source type="image/wepb" srcset=" 1x,  2x"> -->
+        <img src="img/featured-mobile-img.jpg" width="260" height="315" alt="вязанные корзинки" class="featured__img">
+      </picture>
     </div>
 
     <div class="featured__price-block">

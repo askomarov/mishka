@@ -1,12 +1,12 @@
-.contact {
-}
 .contact__container {
   padding-top: 38px;
   padding-bottom: 39px;
+
   @media (min-width: $width-tablet+px) {
     padding-top: 68px;
     padding-bottom: 57px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding: 68px 0 57px;
     display: grid;
@@ -17,9 +17,11 @@
 
 .contact__title {
   margin-bottom: 27px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 49px;
     position: relative;
+
     &::after {
       content: "";
       position: absolute;
@@ -30,10 +32,12 @@
       height: 81px;
     }
   }
+
   @media (min-width: $width-desktop+px) {
     margin-top: 79px;
     margin-bottom: 34px;
     grid-column: 2/3;
+
     &::after {
       right: initial;
       left: -111px;
@@ -78,41 +82,62 @@
     flex: 0 0 100%;
   }
 }
+
 .contact-info__item {
   flex: 0 0 auto;
+
   @media (min-width: $width-tablet+px) {
     margin-right: 26px;
   }
 }
+
 .contact-info__item-value {
   flex: 0 0 183px;
+
   @media (min-width: $width-tablet+px) {
     flex: 0 0 257px;
   }
+
   @media (min-width: $width-desktop+px) {
     flex: 0 0 249px;
   }
 }
+
 .contact-info__item-value--mail {
-  color: #444;
+  color: $text-color;
   text-decoration: underline;
   text-decoration-color: #62d1ba;
   text-underline-offset: 5px;
+  transition: all 0.3s ease 0s;
+
   @media (min-width: $width-tablet+px) {
     text-underline-offset: 8px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    &:hover {
+      color: #46c1ae;
+      text-decoration: underline;
+      text-decoration-color: #46c1ae;
+    }
+  }
+
+  &:active {
+    text-decoration-color: rgba($color: #46c1ae, $alpha: 0.1);
+  }
 }
-.contact-info__item-value--address {
-}
+
 .contact__map-wrap {
   margin: 0 -30px 39px;
   position: relative;
   width: 320px;
   height: 457px;
+
   @media (min-width: $width-tablet+px) {
     width: calc(100% + 100px);
     margin: 0 -50px 55px;
   }
+
   @media (min-width: $width-desktop+px) {
     width: 527px;
     height: 457px;
@@ -121,6 +146,7 @@
     grid-row: 1/4;
   }
 }
+
 .contact__map-img {
   position: absolute;
   width: 100%;
@@ -128,12 +154,15 @@
   top: 0;
   left: 0;
 }
+
 .contact__btn {
   min-height: 52px;
+
   @media (min-width: $width-tablet+px) {
     max-width: 230px;
     margin: 0 auto;
   }
+
   @media (min-width: $width-desktop+px) {
     width: 230px;
     grid-column: 2/3;

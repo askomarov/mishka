@@ -30,14 +30,16 @@
 .promo__container {
   padding: 0;
   padding-top: 73px;
-  // max-width: 100%;
+
   @media (min-width: $width-tablet+px) {
-    padding: 90px 50px 0px;
+    padding: 90px 50px 0;
   }
+
   @media (min-width: $width-desktop+px) {
     padding: 94px 0 0;
   }
 }
+
 .promo__title {
   text-align: center;
   max-width: 260px;
@@ -47,25 +49,39 @@
     max-width: 100%;
     margin-bottom: 372px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-bottom: 355px;
   }
 }
 
-.promo__list {
-}
 .promo-list {
   @media (min-width: $width-tablet+px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
-.promo-list__item {
+
+.promo-list__item-link {
   padding: 30px 24px 31px;
   color: $white;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
+  display: block;
+  position: relative;
+  fill: rgba($color: #149080, $alpha: 0.5);
+  transition: all 0.3s ease 0s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    background: inherit;
+    left: 0;
+    width: 100%;
+    height: 10px;
+  }
 
   span {
     display: inline-block;
@@ -73,25 +89,52 @@
     max-width: 130px;
   }
 
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   @media (min-width: $width-tablet+px) {
     padding: 25px 36px 34px;
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    &:hover {
+      transform: translateY(-5px);
+      fill: rgba($color: #149080, $alpha: 0.7);
+    }
+  }
 }
 
-.promo-list__item--interior {
-  background: #63d1bb url("../img/interior.svg") no-repeat;
-  background-position: calc(100% - 36px) 23px;
-  @media (min-width:$width-tablet+px){
-    background-position: calc(100% - 36px) 30px;
+.promo-list__link--interior {
+  background: #63d1bb;
+
+  svg {
+    top: 23px;
+    right: 36px;
   }
 
+  @media (min-width: $width-desktop+px) {
+    &:hover {
+      background: #59d5bc;
+    }
+  }
 }
-.promo-list__item--toys {
-  background: #56c3b2 url("../img/toy.svg") no-repeat;
-  background-position: calc(100% - 27px) 21px;
-  @media (min-width:$width-tablet+px){
-    background-position: calc(100% - 33px) 31px;
+
+.promo-list__link--toys {
+  background: #56c3b2;
+
+  svg {
+    top: 21px;
+    right: 27px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    &:hover {
+      background: #46c1ae;
+    }
   }
 }

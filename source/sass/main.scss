@@ -1,5 +1,4 @@
 .main {
-  // background: #f5f4f2;
   min-width: $min-width + px;
   height: 100%;
 }
@@ -8,9 +7,11 @@
   font-weight: bold;
   font-size: 27px;
   line-height: 30 / 27 * 100%;
+
   @media (min-width: $width-tablet+px) {
     font-size: 43px;
   }
+
   @media (min-width: $width-desktop+px) {
     font-size: 53px;
   }
@@ -38,13 +39,26 @@
   align-items: center;
   text-align: center;
   background: transparent;
-  border: 2px solid #444444;
+  border: 2px solid $text-color;
   text-transform: uppercase;
-  color: #444444;
+  color: $text-color;
   font-weight: bold;
+  transition: all 0.3s ease 0s;
 
   @media (min-width: $width-tablet+px) {
     font-size: 17px;
     line-height: 20px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    &:hover {
+      background: $text-color;
+      color: $white;
+    }
+  }
+
+  &:active {
+    background: $text-color;
+    color: rgba($color: $white, $alpha: 0.3);
   }
 }
