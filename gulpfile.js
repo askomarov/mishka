@@ -88,11 +88,11 @@ exports.html = html;
 const scripts = () => {
   return gulp.src('source/js/main.js')
     .pipe(gulp.dest('build/js'))
-    .pipe(terser())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    // .pipe(webpack(require('./webpack.config.js')))
+    // .pipe(terser())
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
+    .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('build/js'))
     .pipe(sync.stream());
 }

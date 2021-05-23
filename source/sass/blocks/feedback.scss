@@ -94,9 +94,9 @@
 
 .slider-list__item {
   position: absolute;
-  height: 100%;
   top: 0;
-  transform: translateX(100%);
+  transform: rotateY(-100deg);
+  transform-origin: right;
   opacity: 0;
   transition: all 0.5s ease 0s;
   display: flex;
@@ -104,12 +104,16 @@
 }
 
 .slider-list__item--active {
-  min-height: 234px;
+  min-height: 357px;
   position: relative;
   top: initial;
-  transform: translateX(0);
+  transform: rotateY(0deg);
   opacity: 1;
   transition: all 0.5s ease 0s;
+
+  @media (min-width: $width-tablet+px) {
+    min-height: 234px;
+  }
 }
 
 .item-feedback__text {
