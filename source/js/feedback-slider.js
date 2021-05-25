@@ -24,7 +24,7 @@ const changeActiveSlider = () => {
   checkBtnNext(slideActive);
 };
 
-const promoSlider = () => {
+const feedbackSlider = () => {
   slideActive = document.querySelector(".slider-list__item--active");
   checkBtnPrev(slideActive);
   checkBtnNext(slideActive);
@@ -54,4 +54,4 @@ const promoSlider = () => {
   ))
 };
 
-export { promoSlider };
+export { feedbackSlider };

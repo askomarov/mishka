@@ -4,7 +4,6 @@ const body = document.querySelector('.page');
 const btnOpenModalAddCart = document.querySelector('.feaured__btn');
 const addCartModal = document.querySelector('.add-cart--modal');
 const addForm = document.querySelector('.form-add-cart');
-const btnClose = addForm.querySelector('.form-add-cart__close');
 
 
 const lockBody = (lockPad) => {
@@ -24,16 +23,16 @@ const closeModal = () => {
 const openModal = () => {
   addCartModal.setAttribute('aria-hidden', 'true');
   let bodyLockPadding = getScrollWidth();
+  const btnClose = addForm.querySelector('.form-add-cart__close');
   lockBody(bodyLockPadding);
+  onBtnCloseAddFormModal(btnClose);
 }
 
 const onBtnShowAddFormMOdal = () => {
   btnOpenModalAddCart.addEventListener('click', openModal);
 };
 
-
-
-const onBtnCloseAddFormModal = () => {
+const onBtnCloseAddFormModal = (btnClose) => {
   if (addForm) {
     btnClose.addEventListener('click', (evt) => {
       evt.preventDefault()
@@ -43,4 +42,4 @@ const onBtnCloseAddFormModal = () => {
   }
 };
 
-export { onBtnShowAddFormMOdal, onBtnCloseAddFormModal };
+export { onBtnShowAddFormMOdal };

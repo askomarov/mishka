@@ -2,14 +2,18 @@
 <html lang="ru">
 
 @@include('html/head.html', {
-"title": "page title by include",
-"description": "page description by include"
+"title": "Мишка - милые штучки",
+"description": "Главная страница сайта"
 })
 
 <body class="page no-js">
   @@include('html/svg-sprite.html')
 
-  @@include('html/header.html')
+  @@include('html/header.html', {
+  "index-link": "#",
+  "catalog-link": "catalog.html",
+  "form-link": "#",
+  })
 
   <main class="main">
     @@include('html/promo.html')
@@ -20,7 +24,15 @@
     @@include('html/add-cart.html')
   </main>
 
-  @@include('html/footer.html')
+  @@include('html/footer.html', {
+  "index-link": "#",
+  "htmlacademy-link": "https://htmlacademy.ru/intensive/adaptive",
+  "socials": {
+    "fb": "facebook.com",
+    "tw": "twitter.com",
+    "inst": "instgram.com"
+    }
+  })
 
   <script src="js/main.bundle.js"></script>
 
