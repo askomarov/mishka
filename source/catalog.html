@@ -6,7 +6,7 @@
 "description": "Страница каталога изделий для дома и игрушки ручной работы"
 })
 
-<body class="page no-js">
+<body class="page page-catalog no-js">
   @@include('html/svg-sprite.html')
 
   @@include('html/header.html', {
@@ -16,7 +16,9 @@
   })
 
   <main class="main">
-    <!-- @@include('html/promo.html') -->
+    @@include('html/catalog/title.html',{
+    "title-text": "Каталог товаров",
+    })
     <!-- @@include('html/featured.html') -->
     <!-- @@include('html/about.html') -->
     <!-- @@include('html/feedback.html') -->
@@ -28,10 +30,10 @@
   "index-link": "index.html",
   "htmlacademy-link": "https://htmlacademy.ru/intensive/adaptive",
   "socials": {
-    "fb": "facebook.com",
-    "tw": "twitter.com",
-    "inst": "instgram.com"
-    }
+  "fb": "facebook.com",
+  "tw": "twitter.com",
+  "inst": "instgram.com"
+  }
   })
 
   <script src="js/main.bundle.js"></script>

@@ -30,7 +30,7 @@
     padding-left: 50px;
     padding-right: 50px;
     position: relative;
-    grid-template-columns: 167px 167px 82px 259px;
+    grid-template-columns: 167px minmax(167px, 1fr) 82px 259px;
     grid-template-rows: 89px 65px;
     grid-template-areas:
       ". . search cart"
