@@ -114,7 +114,7 @@
   justify-content: center;
   border: 2px solid rgba($color: $text-color, $alpha: 0.1);
   height: 52px;
-  transition: all 0.3s ease 0s;
+  transition: $transition;
   position: relative;
 
   &::after {
@@ -127,7 +127,7 @@
     transform: scale(1.5);
     border: 2px solid transparent;
     pointer-events: none;
-    transition: all 0.3s ease 0s;
+    transition: $transition;
   }
 }
 
@@ -152,7 +152,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  transition: all 0.3s ease 0s;
+  transition: $transition;
 
   &::before,
   &::after {
@@ -161,7 +161,7 @@
     width: 50%;
     height: 2px;
     background: $text-color;
-    transition: all 0.3s ease 0s;
+    transition: $transition;
   }
 
   &::after {

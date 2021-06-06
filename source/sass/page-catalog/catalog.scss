@@ -1,0 +1,32 @@
+.catalog {
+}
+.catalog__container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $width-tablet+px) {
+    padding-top: 67px;
+    padding-bottom: 53px;
+  }
+}
+
+.catalog__list {
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+
+  @media (min-width: $width-tablet+px) {
+    row-gap: 54px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    grid-template-columns: repeat(auto-fill, minmax(316px, 1fr));
+    column-gap: 50px;
+  }
+}
+
+.catalog-list__item {
+}

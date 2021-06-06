@@ -43,7 +43,7 @@
   text-transform: uppercase;
   color: $text-color;
   font-weight: bold;
-  transition: all 0.3s ease 0s;
+  transition: $transition;
 
   @media (min-width: $width-tablet+px) {
     font-size: 17px;

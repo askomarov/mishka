@@ -7,6 +7,7 @@
 @import "main.scss";
 @import "animation.scss";
 @import "mixins.scss";
+// index.html
 @import "blocks/header.scss";
 @import "blocks/menu-button.scss";
 @import "blocks/promo.scss";
@@ -16,5 +17,13 @@
 @import "blocks/contact.scss";
 @import "blocks/add-cart.scss";
 @import "blocks/footer.scss";
-
-@import "catalog/title.scss";
+// /////// catalog.html
+@import "page-catalog/title.scss";
+@import "page-catalog/header.scss";
+@import "page-catalog/catalog.scss";
+@import "page-catalog/catalog-item.scss";
+@import "page-catalog/video-block.scss";
+// @import "page-catalog/header.scss";
+// @import "page-catalog/header.scss";
+// @import "page-catalog/header.scss";
+// @import "page-catalog/header.scss";

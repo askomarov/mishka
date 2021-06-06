@@ -1,0 +1,16 @@
+.title {
+  background: #f1f1f1;
+  position: relative;
+  
+  @media (min-width: $width-tablet+px) {
+    @include promozigzag;
+  }
+}
+
+.title__container {
+  text-align: center;
+  padding-top: 47px;
+  padding-bottom: 86px;
+}
+.title__title {
+}

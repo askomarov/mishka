@@ -38,13 +38,13 @@ exports.sprite = sprite;
 const makewebp = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(webp({ quality: 70 }))
-    .pipe(gulp.dest('source/optimize-img'));
+    .pipe(gulp.dest('source/img'));
 };
 exports.makewebp = makewebp;
 
 //images
 const images = () => {
-  return gulp.src("source/source-img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img-original/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
