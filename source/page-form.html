@@ -2,8 +2,8 @@
 <html lang="ru">
 
 @@include('html/head.html', {
-"title": "Мишка - каталог товаров",
-"description": "Страница каталога изделий для дома и игрушки ручной работы"
+"title": "Мишка - вязание на заказ",
+"description": "вязанные изделие ручной работы на заказ"
 })
 
 <body class="page page-catalog no-js">
@@ -11,19 +11,15 @@
 
   @@include('html/header.html', {
   "index-link": "index.html",
-  "catalog-link": "#",
-  "form-link": "page-form.html",
+  "catalog-link": "page-catalog.html",
+  "form-link": "#",
   })
 
   <main class="main">
     @@include('html/title.html',{
-    "title-text": "Каталог товаров",
+    "title-text": "Вязание на заказ",
     })
-    @@include('html/page-catalog/catalog.html')
-    @@include('html/page-catalog/video-block.html')
-    <!-- @@include('html/feedback.html') -->
-    <!-- @@include('html/contact.html') -->
-    <!-- @@include('html/add-cart.html') -->
+    @@include('html/page-form/form.html')
   </main>
 
   @@include('html/footer.html', {

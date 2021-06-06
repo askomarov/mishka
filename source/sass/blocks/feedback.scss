@@ -239,6 +239,8 @@
 .feedback__write-btn {
   grid-area: write-btn;
   min-height: 52px;
+  font-size: 18px;
+  line-height: 20px;
 
   @media (min-width: $width-tablet+px) {
     margin-bottom: 38px;

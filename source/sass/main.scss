@@ -44,6 +44,8 @@
   color: $text-color;
   font-weight: bold;
   transition: $transition;
+  font-size: 17px;
+  line-height: 16px;
 
   @media (min-width: $width-tablet+px) {
     font-size: 17px;

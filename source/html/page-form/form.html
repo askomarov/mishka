@@ -1,0 +1,126 @@
+<section>
+  <h2 class="visually-hidden">Форма заказа изделия</h2>
+  <form class="form" action="#" method="post">
+
+    <div class="form__container container">
+
+      <header class="form__header">
+        <p class="form__header-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+          свяжемся с вами, чтобы уточнить
+          детали.</p>
+      </header>
+      <div class="form__content form-content">
+
+        <div class="form-content__row">
+          <h2 class="form-content__heading form-content__heading--type">тип</h2>
+          <fieldset class="form-content__fieldset form-fieldset">
+            <input class="form-fieldset__input form-fieldset__input--radio" type="radio" name="type" id="interior"
+              checked>
+            <label class="form-fieldset__label form-fieldset__label--radio" for="interior">
+              Аксессуар для интерьера
+            </label>
+            <input class="form-fieldset__input form-fieldset__input--radio" type="radio" name="type" id="toy">
+            <label class="form-fieldset__label form-fieldset__label--radio" for="toy">
+              Детская игрушка
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-content__row form-content__row--special">
+          <h2 class="form-content__heading form-content__heading--color">цвет</h2>
+          <fieldset class="form-content__fieldset form-fieldset form-fieldset--color">
+            <input class="form-fieldset__input form-fieldset__input--checkbox" type="checkbox" name="color" id="white"
+              checked>
+            <label class="form-fieldset__label form-fieldset__label--checkbox" for="white">
+              Белый
+            </label>
+            <input class="form-fieldset__input form-fieldset__input--checkbox" type="checkbox" name="color" id="gray"
+              checked>
+            <label class="form-fieldset__label form-fieldset__label--checkbox" for="gray">
+              Серый
+            </label>
+            <input class="form-fieldset__input form-fieldset__input--checkbox" type="checkbox" name="color"
+              id="tiffany">
+            <label class="form-fieldset__label form-fieldset__label--checkbox" for="tiffany">
+              «Тиффани»
+            </label>
+            <input class="form-fieldset__input form-fieldset__input--checkbox" type="checkbox" name="color" id="black">
+            <label class="form-fieldset__label form-fieldset__label--checkbox" for="black">
+              Черный
+            </label>
+            <input class="form-fieldset__input form-fieldset__input--checkbox" type="checkbox" name="color" id="pink">
+            <label class="form-fieldset__label form-fieldset__label--checkbox" for="pink">
+              Розовый
+            </label>
+            <input class="form-fieldset__input form-fieldset__input--checkbox" type="checkbox" name="color" id="orange">
+            <label class="form-fieldset__label form-fieldset__label--checkbox" for="orange">
+              Оранжевый
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-content__row">
+          <h2 class="form-content__heading form-content__heading--bio">фио</h2>
+          <fieldset class="form-content__fieldset form-fieldset">
+            <label class="form-fieldset__label form-fieldset__label--text" for="name">
+              <span class="form-fieldset__label-span">Имя:</span>
+              <input class="form-fieldset__input form-fieldset__input--text" type="text" name="name" id="name"
+                placeholder="Введите ваше имя*" required>
+            </label>
+            <label class="form-fieldset__label form-fieldset__label--text" for="surname">
+              <span class="form-fieldset__label-span">Фамилия:</span>
+              <input class="form-fieldset__input form-fieldset__input--text" type="text" name="surname" id="surname"
+                placeholder="Укажите фамилию*" required>
+            </label>
+            <label class="form-fieldset__label form-fieldset__label--text" for="second-name">
+              <span class="form-fieldset__label-span">Отчество:</span>
+              <input class="form-fieldset__input form-fieldset__input--text" type="text" name="second-name"
+                id="second-name" placeholder="Отчество, если желаете">
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-content__row form-content__row--special">
+          <h2 class="form-content__heading form-content__heading--tel">тел</h2>
+          <fieldset class="form-content__fieldset form-fieldset">
+            <label class="form-fieldset__label form-fieldset__label--tel" for="tel">
+              <svg class="form-fieldset__label-icon form-fieldset__label-icon--tel" width="25" height="24">
+                <use xlink:href="#icon-form-tel"></use>
+              </svg>
+              <input class="form-fieldset__input form-fieldset__input--tel" type="tel" name="tel" id="tel" required
+                placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-content__row form-content__row--special">
+          <h2 class="form-content__heading form-content__heading--mail">e-mail</h2>
+          <fieldset class="form-content__fieldset form-fieldset">
+            <label class="form-fieldset__label form-fieldset__label--mail" for="mail">
+              <svg class="form-fieldset__label-icon form-fieldset__label-icon--mail" width="25" height="24">
+                <use xlink:href="#icon-form-mail"></use>
+              </svg>
+              <input class="form-fieldset__input form-fieldset__input--mail" type="email" name="mail" id="mail" required
+                placeholder="Ваш Email*">
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-content__row">
+          <h2 class="form-content__heading form-content__heading--add">доп</h2>
+          <fieldset class="form-content__fieldset form-fieldset">
+            <textarea class="form-fieldset__textarea" name="additional-info" id="" cols="30" rows="10"
+              placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </fieldset>
+        </div>
+      </div>
+
+      <footer class="form__footer">
+        <p class="form__footer-text">*Поля обязательны для заполнения</p>
+        <button class="form__footer-btn main-btn" type="submit">Отправить заказ</button>
+      </footer>
+
+    </div>
+
+  </form>
+</section>
