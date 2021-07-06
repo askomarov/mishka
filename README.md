@@ -1,6 +1,6 @@
 # Репозиторий проекта Mishka
 ## <a href="https://askomarov.github.io/mishka/" target="_blank">Ссылка на готовый проект</a>.
-Адаптивная верстка трёх страничного сайта по макетам Figma.
+Адаптивная mobile-first верстка трёх страничного сайта по макетам Figma.
 <p align="center">
 <img src="source/og-site-img.png" alt="изображение главной страницы" width="320" height="300"/>
 </p>
